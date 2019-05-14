@@ -1,0 +1,45 @@
+{
+    "name": "jonasva/laravel-vision",
+    "description": "A Laravel 5 package to interact with Google Cloud Vision.",
+    "keywords": [
+        "laravel",
+        "ocr",
+        "vision",
+        "google",
+        "gcloud"
+    ],
+    "homepage": "https://github.com/jonasva/laravel-vision",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas Van Assche",
+            "email": "jonas.vanassche@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : "^7.2",
+        "illuminate/support": "^5.4",
+        "google/cloud-storage": "^1.3",
+        "google/cloud-vision": "^0.22.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jonasva\\Vision\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jonasva\\Vision\\VisionServiceProvider"
+            ],
+            "aliases": {
+                "Vision": "Jonasva\\Vision\\VisionFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
